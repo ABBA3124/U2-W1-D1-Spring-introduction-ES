@@ -92,6 +92,8 @@ public class ConfigMenu {
         menu.aggiungiProdotto(margherita());
         menu.aggiungiProdotto(hawaiianPizza());
         menu.aggiungiProdotto(salamiPizza());
+
+        
         menu.aggiungiProdotto(limonata());
         menu.aggiungiProdotto(acqua());
         menu.aggiungiProdotto(vino());
