@@ -7,8 +7,11 @@ public class Pizza extends ProvaAstratta {
 
     private List<Topping> toppings = new ArrayList<>();
 
-    public Pizza(String name, double price, String infoNutrizionali) {
-        super(name, price, infoNutrizionali);
+    private String calorie;
+
+    public Pizza(String name, double price, String ingredienti, String calorie) {
+        super(name, price, ingredienti);
+        this.calorie = calorie;
         this.toppings = toppings;
     }
 

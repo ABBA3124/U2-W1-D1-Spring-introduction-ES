@@ -3,12 +3,12 @@ package davideabbadessa.U2_W1_D1_Spring_ES.entities;
 public abstract class ProvaAstratta {
     private String name;
     private double price;
-    private String infoNutrizionali;
+    private String ingredienti;
 
-    public ProvaAstratta(String name, double price, String infoNutrizionali) {
+    public ProvaAstratta(String name, double price, String ingredienti) {
         this.name = name;
         this.price = price;
-        this.infoNutrizionali = infoNutrizionali;
+        this.ingredienti = ingredienti;
     }
 
     public String getName() {
@@ -28,11 +28,11 @@ public abstract class ProvaAstratta {
     }
 
     public String getInfoNutrizionali() {
-        return infoNutrizionali;
+        return ingredienti;
     }
 
-    public void setInfoNutrizionali(String infoNutrizionali) {
-        this.infoNutrizionali = infoNutrizionali;
+    public void setInfoNutrizionali(String ingredienti) {
+        this.ingredienti = ProvaAstratta.this.ingredienti;
     }
 
     @Override
@@ -40,7 +40,7 @@ public abstract class ProvaAstratta {
         return "ProvaAstratta{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", infoNutrizionali='" + infoNutrizionali + '\'' +
+                ", ingredienti='" + ingredienti + '\'' +
                 '}';
     }
 }

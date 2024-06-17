@@ -15,8 +15,8 @@ public class Menu {
 
     public void stampaMenu() {
         for (ProvaAstratta provaAstratta : provaAstrattas) {
-            System.out.println(provaAstratta.getName() + ": " + provaAstratta.getPrice() + " - " + provaAstratta.getInfoNutrizionali());
+            System.out.println(provaAstratta.getName() + ": " + provaAstratta.getPrice() + "€ - Ingredienti: " + provaAstratta.getInfoNutrizionali());
         }
     }
-    
+
 }
