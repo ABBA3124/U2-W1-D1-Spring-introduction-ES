@@ -14,83 +14,82 @@ public class ConfigMenu {
     //<------------ Pizze ------------>
     @Bean
     public Pizza margherita() {
-        return new Pizza("Pizza Margherita", 4.99, "Pomodoro, Mozzarella", "Calorie: 1104");
+        Pizza pizza = new Pizza("\nPizza Margherita (Pomodoro, Mozzarella)", 4.99, 1104);
+        pizza.aggiungiTopping(mozzarella());
+        return pizza;
     }
 
     @Bean
-    public Pizza hawaiian() {
-        return new Pizza("Pizza Hawaiian", 6.49, "Pomodoro, Mozzarella, Prosciutto, Ananas", "Calorie: 1024");
+    public Pizza hawaiianPizza() {
+        Pizza pizza = new Pizza("\nHawaiian Pizza (Pomodoro, Mozzarella, Prosciutto, Ananas)", 6.49, 1024);
+        pizza.aggiungiTopping(mozzarella());
+        pizza.aggiungiTopping(prosciutto());
+        pizza.aggiungiTopping(ananas());
+        return pizza;
     }
 
     @Bean
-    public Pizza salame() {
-        return new Pizza("Pizza Salame", 5.99, "Pomodoro, Mozzarella, Salame", "Calorie: 1160");
+    public Pizza salamiPizza() {
+        Pizza pizza = new Pizza("\nSalami Pizza (Pomodoro, Mozzarella, Salame)", 5.99, 1160);
+        pizza.aggiungiTopping(mozzarella());
+        pizza.aggiungiTopping(salame());
+        return pizza;
     }
-
 
     //<------------ Drink ------------>
     @Bean
-    public Drink water() {
-        return new Drink("Water", 1.29, "Calorie: 0");
+    public Drink limonata() {
+        return new Drink("\nLimonata (0.33l)", 1.29, 128);
     }
 
     @Bean
-    public Drink lemonade() {
-        return new Drink("Lemonade", 1.29, "Calorie: 128");
+    public Drink acqua() {
+        return new Drink("\nAcqua (0.5l)", 1.29, 0);
     }
 
     @Bean
-    public Drink wine() {
-        return new Drink("Wine", 7.49, "Calorie: 607");
+    public Drink vino() {
+        return new Drink("\nVino (0.75l, 13%)", 7.49, 607);
     }
-
 
     //<------------ Topping ------------>
     @Bean
     public Topping mozzarella() {
-        return new Topping("Mozzarella", 0.69, "Calorie: 92");
+        return new Topping("\nMozzarella", 0.69, 92);
     }
 
     @Bean
     public Topping prosciutto() {
-        return new Topping("Prosciutto", 0.99, "Calorie: 35");
+        return new Topping("\nProsciutto", 0.99, 35);
     }
 
     @Bean
-    public Topping cipolla() {
-        return new Topping("Cipolla", 0.69, "Calorie: 22");
+    public Topping cipolle() {
+        return new Topping("\nCipolle", 0.69, 22);
     }
 
     @Bean
     public Topping ananas() {
-        return new Topping("Ananas", 0.79, "Calorie: 24");
+        return new Topping("\nAnanas", 0.79, 24);
     }
 
     @Bean
-    public Topping salameT() {
-        return new Topping("Salame", 0.99, "Calorie: 86");
+    public Topping salame() {
+        return new Topping("\nSalame", 0.99, 86);
     }
 
-
-    //Menu
     @Bean
     public Menu menu() {
         Menu menu = new Menu();
         menu.aggiungiProdotto(margherita());
-        menu.aggiungiProdotto(hawaiian());
-        menu.aggiungiProdotto(salame());
-        //drink
-        menu.aggiungiProdotto(water());
-        menu.aggiungiProdotto(wine());
-        menu.aggiungiProdotto(lemonade());
-        //toppings
-//        menu.aggiungiProdotto(mozzarella());
-//        menu.aggiungiProdotto(prosciutto());
-//        menu.aggiungiProdotto(cipolla());
-//        menu.aggiungiProdotto(ananas());
-//        menu.aggiungiProdotto(salameT());
+        menu.aggiungiProdotto(hawaiianPizza());
+        menu.aggiungiProdotto(salamiPizza());
+        menu.aggiungiProdotto(limonata());
+        menu.aggiungiProdotto(acqua());
+        menu.aggiungiProdotto(vino());
         return menu;
     }
-
-
 }
+
+
+

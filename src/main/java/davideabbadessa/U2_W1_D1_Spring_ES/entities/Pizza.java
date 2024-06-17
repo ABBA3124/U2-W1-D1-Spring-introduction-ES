@@ -4,15 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza extends ProvaAstratta {
+    private List<Topping> toppings;
 
-    private List<Topping> toppings = new ArrayList<>();
-
-    private String calorie;
-
-    public Pizza(String name, double price, String ingredienti, String calorie) {
-        super(name, price, ingredienti);
-        this.calorie = calorie;
-        this.toppings = toppings;
+    public Pizza(String name, double price, int calorie) {
+        super(name, price, calorie);
+        this.toppings = new ArrayList<>();
     }
 
     public void aggiungiTopping(Topping topping) {

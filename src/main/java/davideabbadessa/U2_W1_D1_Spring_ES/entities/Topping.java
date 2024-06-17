@@ -4,20 +4,12 @@ public class Topping {
 
     private String name;
     private double price;
-    private String calorie;
+    private int calorie;
 
 
-    public Topping(String name, double price, String calorie) {
+    public Topping(String name, double price, int calorie) {
         this.name = name;
         this.price = price;
-        this.calorie = calorie;
-    }
-
-    public String getInfoNutrizionali() {
-        return calorie;
-    }
-
-    public void setInfoNutrizionali(String calorie) {
         this.calorie = calorie;
     }
 
@@ -37,12 +29,19 @@ public class Topping {
         this.price = price;
     }
 
+    public int getCalorie() {
+        return calorie;
+    }
+
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
+    }
+
     @Override
     public String toString() {
-        return "Topping{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", infoNutrizionali='" + calorie + '\'' +
-                '}';
+        return "Topping: " +
+                " " + name +
+                ", calorie: " + calorie +
+                ", prezzo: " + price;
     }
 }

@@ -3,12 +3,12 @@ package davideabbadessa.U2_W1_D1_Spring_ES.entities;
 public abstract class ProvaAstratta {
     private String name;
     private double price;
-    private String ingredienti;
+    private int calorie;
 
-    public ProvaAstratta(String name, double price, String ingredienti) {
+    public ProvaAstratta(String name, double price, int calorie) {
         this.name = name;
         this.price = price;
-        this.ingredienti = ingredienti;
+        this.calorie = calorie;
     }
 
     public String getName() {
@@ -27,12 +27,12 @@ public abstract class ProvaAstratta {
         this.price = price;
     }
 
-    public String getInfoNutrizionali() {
-        return ingredienti;
+    public int getCalorie() {
+        return calorie;
     }
 
-    public void setInfoNutrizionali(String ingredienti) {
-        this.ingredienti = ProvaAstratta.this.ingredienti;
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
     }
 
     @Override
@@ -40,7 +40,7 @@ public abstract class ProvaAstratta {
         return "ProvaAstratta{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", ingredienti='" + ingredienti + '\'' +
+                ", ingredienti='" + calorie + '\'' +
                 '}';
     }
 }
