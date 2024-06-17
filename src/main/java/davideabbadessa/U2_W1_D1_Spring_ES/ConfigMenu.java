@@ -11,6 +11,32 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigMenu {
 
+    //<------------ Topping ------------>
+    @Bean
+    public Topping mozzarella() {
+        return new Topping("\nMozzarella", 0.69, 92);
+    }
+
+    @Bean
+    public Topping prosciutto() {
+        return new Topping("\nProsciutto", 0.99, 35);
+    }
+
+    @Bean
+    public Topping cipolle() {
+        return new Topping("\nCipolle", 0.69, 22);
+    }
+
+    @Bean
+    public Topping ananas() {
+        return new Topping("\nAnanas", 0.79, 24);
+    }
+
+    @Bean
+    public Topping salame() {
+        return new Topping("\nSalame", 0.99, 86);
+    }
+
     //<------------ Pizze ------------>
     @Bean
     public Pizza margherita() {
@@ -52,41 +78,24 @@ public class ConfigMenu {
         return new Drink("\nVino (0.75l, 13%)", 7.49, 607);
     }
 
-    //<------------ Topping ------------>
-    @Bean
-    public Topping mozzarella() {
-        return new Topping("\nMozzarella", 0.69, 92);
-    }
-
-    @Bean
-    public Topping prosciutto() {
-        return new Topping("\nProsciutto", 0.99, 35);
-    }
-
-    @Bean
-    public Topping cipolle() {
-        return new Topping("\nCipolle", 0.69, 22);
-    }
-
-    @Bean
-    public Topping ananas() {
-        return new Topping("\nAnanas", 0.79, 24);
-    }
-
-    @Bean
-    public Topping salame() {
-        return new Topping("\nSalame", 0.99, 86);
-    }
 
     @Bean
     public Menu menu() {
         Menu menu = new Menu();
+        menu.aggiungiProdotto(mozzarella());
+        menu.aggiungiProdotto(ananas());
+        menu.aggiungiProdotto(prosciutto());
+        menu.aggiungiProdotto(cipolle());
+        menu.aggiungiProdotto(salame());
+
+
         menu.aggiungiProdotto(margherita());
         menu.aggiungiProdotto(hawaiianPizza());
         menu.aggiungiProdotto(salamiPizza());
         menu.aggiungiProdotto(limonata());
         menu.aggiungiProdotto(acqua());
         menu.aggiungiProdotto(vino());
+
         return menu;
     }
 }

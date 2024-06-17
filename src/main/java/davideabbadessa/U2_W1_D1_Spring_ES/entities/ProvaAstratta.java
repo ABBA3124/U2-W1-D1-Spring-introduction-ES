@@ -37,10 +37,8 @@ public abstract class ProvaAstratta {
 
     @Override
     public String toString() {
-        return "ProvaAstratta{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", ingredienti='" + calorie + '\'' +
-                '}';
+        return " -Condimenti: " + name +
+                ", Calorie: " + calorie + " kcal" +
+                ", Prezzo: " + price + "€";
     }
 }

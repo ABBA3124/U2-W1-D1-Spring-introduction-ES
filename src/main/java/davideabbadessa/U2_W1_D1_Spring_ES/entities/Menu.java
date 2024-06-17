@@ -24,9 +24,9 @@ public class Menu {
         }
         System.out.println("\n\t<-- Toppings -->");
         for (ProvaAstratta provaAstratta : provaAstrattas) {
-            if (provaAstrattas instanceof Topping) {
+            if (provaAstratta instanceof Topping) {
                 System.out.println(provaAstratta.getName());
-                System.out.println("Calorie: " + provaAstratta.getCalorie() + " Prezzo: " + provaAstratta.getPrice() + "€");
+                System.out.println("Calorie: " + provaAstratta.getCalorie() + " kcal" + " Prezzo: " + provaAstratta.getPrice() + "€");
             }
         }
         System.out.println("\n\t<-- Drinks -->");
